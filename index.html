@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Salve a Rapunzel</title>
+	<link href="./css/estilo.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery.js"></script>
+	
+	<script>
+      $(document).ready(function() {
+        var resgatou = false;
+
+		var posicTorre = $(".img-torre").offset().left + $(".img-bruxa").width();
+		
+        window.setInterval(function() {
+          let posicao = $(".img-bruxa").offset().left;
+		  if (!resgatou && posicao < posicTorre) {
+            $(".img-bruxa").animate({left: '+=5px'}, "slow");
+          }
+        }, 500);
+		
+        $("button").click(function() {
+          $(".img-principe").animate({left: '+=10px'}, "slow");
+        });
+	  /*
+        window.setInterval(function() {
+          $(".img-bruxa").animate({'left': '+=100px'});
+        }, 500);*/
+      });
+    </script>
+	
+  </head>
+  <body>
+    <div class="caminho-bruxa">
+      <img src="./img/bruxa.png" class="img-bruxa">
+    </div>
+    <div class="conteiner">
+      <div class="div-perguntas">
+          <fieldset class="formulario">
+            <label for="dsPergunta">Aqui vai uma pergunta</label>
+			<br>
+            <button> Responta 1 <button>
+            <button> Responta 2 <button>
+            <button> Responta 3 <button>
+            <button> Responta 4 <button>
+          </fieldset>
+      </div>
+      <div class="div-torre">
+        <img src="./img/torre.png" class="img-torre">
+      </div>      
+    </div>
+    <div class="caminho-principe">
+      <img src="./img/principe.png" class="img-principe">
+    </div> 
+  </body>
+</html>
