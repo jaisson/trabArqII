@@ -1,0 +1,147 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  gap: 8px;
+  background-image: linear-gradient(to bottom, #FFFFFF, #90EE90);
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  width: 100%;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.img-bruxa {
+  width : 5vw;
+  height : 10vh;
+  position : absolute;
+  z-index : 2;
+  top:0;
+  left: 0;
+}
+
+.caminho-principe {
+  width : 100vw;
+  height : 20vh;
+  position : absolute;
+  z-index : 3;
+  bottom: 0;
+  left: 0;
+}
+
+.img-principe {
+  width : 15vw;
+  height : 20vh;
+  position : absolute;
+  z-index : 2;
+}
+
+.div-torre {
+  margin-left: auto;
+}
+
+.img-torre {
+  height : 90vh;
+}
+
+.div-perguntas {
+  width: 80%;
+  display: flex;
+  height : 100%;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: -15%;
+  left: 0;
+}
+
+.conteiner-perguntas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formulario {
+  margin-top: 4%;
+  margin-left: 0%;
+  width: 100%;
+}
+
+.dsPergunta {
+  font-size: 3rem;
+  color: violet;
+  font-family:cursive;
+  padding-bottom: 5%;
+}
+
+.respostas {
+  margin-top: 0.5%;
+  margin-left: 3%;
+}
+
+.responder {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: violet;
+  font-size: 2rem;
+  padding-left: 2%;
+  text-decoration: underline wavy pink;
+}
+
+.modal-endgame {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.7;
+  top:0;
+  left:0;
+}
+
+.modal-endgame-msg {
+  position: absolute;
+  z-index: 10;
+  width: 50vw;
+  height: 50vh;
+  background: white;
+  top:10%;
+  left:25%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff19d8;
+  font-weight: bold;
+  font-size: 2rem;
+
+  text-align: center;
+
+  border-radius: 2%;
+}

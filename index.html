@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="icon" href="https://ifrs.edu.br/ibiruba/wp-content/themes/ifrs-portal-theme/favicons/favicon-32x32.png"/>
     <meta charset="utf-8"/>
     <title>Salve a Rapunzel</title>
-    <link href="./estilo.css" rel="stylesheet" type="text/css">
-    <script src="./jquery.js"></script>
-    <script src="./main.js"></script>
+    <link href="./css/estilo.css" rel="stylesheet" type="text/css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/perguntas.js"></script>
+    <script src="./js/main.js"></script>
   </head>
   <body>
-    <div class="caminho-bruxa">
-      <img src="./bruxa.png" class="img-bruxa">
-    </div>
-    <div class="conteiner">
-      <div class="div-perguntas">
-          <fieldset class="formulario">
-            <label for="dsPergunta">Aqui vai uma pergunta</label>
-            <br>
-            <button> Responta 1 <button>
-            <button> Responta 2 <button>
-            <button> Responta 3 <button>
-            <button> Responta 4 <button>
-          </fieldset>
+    <input type="hidden" id="totPerguntas" value="1">
+    <input type="hidden" id="totAcertos" value="0">
+    <input type="hidden" id="resgatou" value="false">
+    
+    <div class="modal-endgame"></div>
+    <div class="modal-endgame-msg" style="display: none;"></div>
+    <div class="layout">
+      <div class="header">
+        <div class="caminho-bruxa">
+          <img src="./img/bruxa.png" class="img-bruxa">
+        </div>
       </div>
-      <div class="div-torre">
-        <img src="./torre.png" class="img-torre">
-      </div>      
+      <div class="main">
+        <div class="div-perguntas">
+          <div class="conteiner-perguntas">
+            <div class="formulario">
+              <span class="dsPergunta" id="dsPergunta"></span>
+              <div class="respostas">
+                <button id="resp1" value="1" class="responder"></button>
+                <button id="resp2" value="2" class="responder"></button>
+                <button id="resp3" value="3" class="responder"></button>
+                <button id="resp4" value="4" class="responder"></button>
+              </div>
+            </div>
+            <div class="msgResultado">
+            </div>            
+          </div>
+        </div>      
+        <div class="div-torre">
+          <img src="./img/torre.png" class="img-torre">
+        </div>  
+      </div>
+      <div class="footer">
+        <div class="caminho-principe">
+          <img src="./img/principe.png" class="img-principe">
+        </div> 
+      </div>
     </div>
-    <div class="caminho-principe">
-      <img src="./principe.png" class="img-principe">
-    </div> 
   </body>
 </html>
